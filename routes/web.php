@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/mahasiswa/insert', [MahasiswaController::class, 'insert']);
+Route::get('/mahasiswa/update', [MahasiswaController::class, 'update']);
+Route::get('/mahasiswa/delete', [MahasiswaController::class, 'delete']);
+Route::get('/mahasiswa/select', [MahasiswaController::class, 'select']);
+
 
 Route::get('/', function () {
     return view('welcome');
